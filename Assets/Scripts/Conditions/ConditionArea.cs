@@ -2,7 +2,6 @@
 using System.Collections;
 using UnityEngine.Events;
 
-[AddComponentMenu("Playground/Conditions/Condition Area")]
 [RequireComponent(typeof(BoxCollider2D))]
 public class ConditionArea : ConditionBase
 {

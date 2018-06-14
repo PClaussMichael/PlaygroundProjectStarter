@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("Playground/Movement/Jump")]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Jump : Physics2DObject
 {	

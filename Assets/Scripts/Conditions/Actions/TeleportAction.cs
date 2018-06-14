@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("Playground/Actions/Teleport")]
 public class TeleportAction : Action
 {
 	public GameObject objectToMove;
-	public Vector2 newPosition;
+	public Vector3 newPosition;
 	public bool stopMovements = true;
 
 

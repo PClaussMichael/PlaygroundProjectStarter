@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("Playground/Movement/Patrol")]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Patrol : Physics2DObject
 {

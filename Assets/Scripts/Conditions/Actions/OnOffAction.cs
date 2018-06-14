@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("Playground/Actions/On-Off")]
 public class OnOffAction : Action
 {
 	public GameObject objectToAffect;

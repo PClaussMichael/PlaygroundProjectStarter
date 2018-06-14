@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("Playground/Attributes/Modify Health")]
-[RequireComponent(typeof(PolygonCollider2D), typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
 public class ModifyHealthAttribute : MonoBehaviour
 {
 

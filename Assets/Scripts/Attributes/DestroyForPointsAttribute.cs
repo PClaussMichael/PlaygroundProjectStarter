@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("Playground/Attributes/Destroy For Points")]
 public class DestroyForPointsAttribute : MonoBehaviour
 {
 	private UIScript userInterface;

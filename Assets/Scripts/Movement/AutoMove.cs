@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("Playground/Movement/Auto Move")]
 [RequireComponent(typeof(Rigidbody2D))]
 public class AutoMove : Physics2DObject
 {

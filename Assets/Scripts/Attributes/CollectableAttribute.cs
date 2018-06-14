@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("Playground/Attributes/Collectable")]
 [RequireComponent(typeof(Collider2D))]
 public class CollectableAttribute : MonoBehaviour
 {

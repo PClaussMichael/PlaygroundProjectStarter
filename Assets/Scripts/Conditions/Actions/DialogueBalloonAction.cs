@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("Playground/Actions/Dialogue Balloon")]
 public class DialogueBalloonAction : Action
 {
 
@@ -27,20 +26,13 @@ public class DialogueBalloonAction : Action
 	{
 		if(!balloonIsActive)
 		{
-			DialogueSystem d = GameObject.FindObjectOfType<DialogueSystem>();
-			if(d == null)
-			{
-				//Dialogue System is not in the scene
-				Debug.LogWarning("You need a UI in the scene to display dialogue!");
-				return false;
-			}
-			
-			//Dialogue System is found
-			b = d.CreateBalloon(textToDisplay, (disappearMode == DisappearMode.ButtonPress), keyToPress, timeToDisappear, backgroundColor, textColor, targetObject);
+			b = GameObject.FindObjectOfType<DialogueSystem>().CreateBalloon(textToDisplay, (disappearMode == DisappearMode.ButtonPress), keyToPress, timeToDisappear, backgroundColor, textColor, targetObject);
 			b.BalloonDestroyed += OnBalloonDestroyed;
 			balloonIsActive = true;
 			
 			StartCoroutine(WaitForBallonDestroyed());
+
+			Debug.Log("Returning true");
 			return true;
 		}
 		else
@@ -52,6 +44,8 @@ public class DialogueBalloonAction : Action
 	private IEnumerator WaitForBallonDestroyed()
 	{
 		yield return new WaitUntil(()=> !balloonIsActive);
+
+		Debug.Log("Balloon destroyed");
 	}
 
 
